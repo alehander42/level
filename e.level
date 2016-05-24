@@ -1,0 +1,12 @@
+include: stdio
+
+enum Instruction:
+  :PSH :ADD :POP :SET :HLT
+
+Int -> Int
+def add0(e):
+  return e
+
+def main:
+  let e = :PSH
+  echo(e)

@@ -1,0 +1,34 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Level
+scopeName: source.syntax_name
+fileTypes: [level]
+uuid: 59de3993-e0aa-46f3-b0c1-4c369a24fe46
+
+patterns:
+- comment: comments
+  name: comment.line.level
+  match: \/\/.+
+- comment: keywords
+  match: '(?<!\.)\b(def|async|let|del|include|return|case|enum|class|else|elif|try|catch|END|end|for|if|in|module|unless|until|when|while)\b(?![?!])'
+  name: keyword.other.level
+- comment: types
+  match: '(?<!\.)\b([A-Z]\w*)\b(?![?!])'
+  name: constant.character.escape.level
+- comment: variables
+  match: '(?<!\.)\b([a-z]\w*)\b(?![?!])'
+  name: variable.other.object.level
+- comment: strings
+  match: '(\"[^\"]*\")'
+  name: string.quoted.double.level
+- comment: chars
+  match: "('[^']*')"
+  name: string.quoted.single.level
+- comment: numbers
+  match: '(?<!\.)\b(\d*\.?\d+)\b(?![?!])'
+  name: constant.numeric.level
+- comment: symbols
+  match: '(\:[a-zA-Z]+)\b(?![?!])'
+  name: constant.other.symbol.level
+
+...
